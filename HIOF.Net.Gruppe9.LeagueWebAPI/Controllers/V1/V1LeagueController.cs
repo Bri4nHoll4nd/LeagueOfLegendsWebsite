@@ -27,7 +27,7 @@ namespace HIOF.Net.Gruppe9.LeagueWebAPI.Controllers
                 return BadRequest($"Can not create http client");
             }
 
-            client.DefaultRequestHeaders.Add("X-Riot-Token", "RGAPI-54de1d46-1dec-443b-bff6-daacd0c0ac86");
+            client.DefaultRequestHeaders.Add("X-Riot-Token", "apiKey");
             HttpResponseMessage summonerResponse = await client.GetAsync($"https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summonerName}");
             V1SummonerDto? summoner = await summonerResponse.Content.ReadAsAsync<V1SummonerDto>();
             if (summoner == null)
