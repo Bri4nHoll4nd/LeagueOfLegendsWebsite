@@ -1,0 +1,33 @@
+﻿@page "/"
+
+<PageTitle>DataCrank - Summoner Lookup</PageTitle>
+
+<main>
+    <section id="content">
+        <header>
+            <h1><span class="primary">DataCrank</span>, your <span class="secondary">League data</span> in one place.</h1>
+        </header>
+
+        <form>
+            <section id="form-region">
+                <label for="region">Region</label>
+                <select name="region">
+                    <option selected value="euw">EUW</option>
+                    <option value="na">NA</option>
+                    <option value="kr">KR</option>
+                </select>
+            </section>
+
+            <section id="form-summoner">
+                <label for="summonerName">Summoner Name</label>
+                <input type="text" id="summonerName" name="summonerName" placeholder="Enter summoner name" />
+            </section>
+
+            <section>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </section>
+        </form>
+
+        <p><a href="/login">Log in</a> or <a href="/signup">sign up</a> to access all features.</p>
+    </section>
+</main>

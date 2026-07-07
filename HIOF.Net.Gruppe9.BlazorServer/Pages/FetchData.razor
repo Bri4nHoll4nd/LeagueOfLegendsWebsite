@@ -1,0 +1,54 @@
+﻿@page "/fetchdata"
+
+<PageTitle>Summoners</PageTitle>
+
+@using HIOF.Net.Gruppe9.BlazorServer.Data
+
+<main>
+    <h1>Summoner list</h1>
+
+    @if (summoner == null)
+    {
+        <p><em>Loading summoner data...</em></p>
+    }
+    else
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>AccountId</th>
+                    <th>ProfileIconId</th>
+                    <th>RevisionDate</th>
+                    <th>Id</th>
+                    <th>Puuid</th>
+                    <th>SummonerLevel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@summoner.Name</td>
+                    <td>@summoner.AccountId</td>
+                    <td>@summoner.ProfileIconId</td>
+                    <td>@(new DateTime(1970, 1, 1).AddMilliseconds(summoner.RevisionDate).ToString())</td>
+                    <td>@summoner.Id</td>
+                    <td>@summoner.Puuid</td>
+                    <td>@summoner.SummonerLevel</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+</main>
+
+@code {
+    private SummonerPlaceholder summoner = new SummonerPlaceholder()
+    {
+        Name = "7marre",
+        AccountId = "uRrsLP5YtTUIs5eayT5d0uTVt8iEc3lh6gQI4RY_iPmcCsM",
+        ProfileIconId = 4301,
+        RevisionDate = 1677949295000,
+        Id = "xgNZnrkfaAivlZJoaA26p3Er7MjPac5c5CutUOsf_1Ixq2w",
+        Puuid = "1iSVkaC49HrdN2RELEDTp6bpJVtJSXhSc95_mP8RlHGXuxeNuwc4iTj8iikENTzBGGjo5a7vZ-9w5g",
+        SummonerLevel = 218
+    };
+}

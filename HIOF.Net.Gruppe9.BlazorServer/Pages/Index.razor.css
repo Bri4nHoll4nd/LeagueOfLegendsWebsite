@@ -1,0 +1,112 @@
+﻿main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+main h1:focus-visible {
+    outline: none;
+}
+
+    main #content p {
+        margin-top: 2rem;
+    }
+
+form {
+    display: flex;
+}
+
+    form section {
+        align-self: end;
+    }
+
+    form label {
+        display: block;
+        font-weight: 700;
+        font-size: 1em;
+    }
+
+    form #form-summoner label{
+        margin-left: 0.25rem;
+    }
+
+    form select option {
+        font-weight: 700;
+    }
+
+    form input:focus-visible, form select:focus-visible, button:focus-visible {
+        outline: none;
+    }
+
+    form select {
+        align-self: center;
+        margin: 0;
+        margin-top: 0.25rem;
+        padding: 0.5rem;
+        border: 2px solid var(--black);
+        border-radius: var(--radius);
+        background-color: var(--white);
+        color: var(--black);
+        font-weight: 700;
+        font-size: 0.9em;
+        font-family: var(--font-text);
+        height: 2.5rem;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    form input[type='text'] {
+        align-self: center;
+        margin: 0;
+        margin-top: 0.25rem;
+        padding: 0.5rem;
+        border: 2px solid var(--black);
+        border-radius: var(--radius);
+        background-color: var(--white);
+        color: var(--black);
+        font-size: 1em;
+        font-weight: 700;
+        font-family: var(--font-text);
+        height: 2.5rem;
+        border-left: 2px solid var(--black);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    form button {
+        margin: 0;
+        padding: 0.5rem;
+        border: 2px solid var(--black);
+        border-radius: var(--radius);
+        background-color: var(--primary);
+        color: var(--white);
+        font-size: 1em;
+        font-family: var(--font-text);
+        font-weight: 700;
+        height: 2.5rem;
+        width: 2.5rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-left: 2px solid var(--black);
+    }
+
+/* Media queries */
+@media only screen and (min-width: 750px) {
+    main {
+        justify-content: center;
+        margin-top: 0rem;
+        margin-bottom: 5rem;
+    }
+
+        main #content {
+            padding: 3rem;
+            border-radius: var(--radius-big);
+            background-color: var(--light-grey);
+            box-shadow: 0px 10px 60px #bebebe, 0px -10px 60px #ffffff;
+        }
+}

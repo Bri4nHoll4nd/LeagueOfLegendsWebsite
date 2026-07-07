@@ -1,0 +1,25 @@
+/* Site-wide grid container */
+#grid-container {
+    background: linear-gradient(180deg, var(--grey), rgba(160, 180, 231, 0.25));
+    display: grid;
+    min-height: 100vh;
+    min-width: fit-content;
+    position: relative;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4.5rem auto 6rem;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+}
+
+/* Media queries */
+@media only screen and (min-width: 1200px) {
+    #grid-container {
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-areas:
+            'header header header header'
+            '. main main .'
+            'footer footer footer footer';
+    }
+}
